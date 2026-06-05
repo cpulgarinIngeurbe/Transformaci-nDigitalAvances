@@ -253,7 +253,7 @@
 <div class="p-stack-lg flex-1">
 <div class="w-12 h-1 bg-accent-active mb-6"></div>
 <h2 class="font-headline-lg uppercase mb-4 text-secondary">Modelado BIM Paramétrico</h2>
-<p class="font-body-lg text-on-surface mb-6">Modelado con parámetros inteligentes en 3D. Implementación de un Tablero de Control integrado para cuantificación automática en tiempo real.</p>
+<p class="font-body-lg text-on-surface mb-6">Modelado con parámetros inteligentes en 3D. Implementación de un Tablero de cuantificación integrado para la obtención de cantidades.</p>
 <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
 <li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active text-lg" data-icon="check_circle">check_circle</span>
@@ -274,7 +274,7 @@ Confiabilidad técnica de procesos garantizada
 </ul>
 <div class="mt-8">
 <div class="inline-block px-4 py-2 bg-accent-active/10 border border-accent-active/30 rounded text-accent-active font-label-sm">
-INTEGRACIÓN CON TABLERO DE CONTROL
+TABLERO DE CUANTIFICACIÓN
 </div>
 </div>
 </div>
@@ -289,7 +289,7 @@ INTEGRACIÓN CON TABLERO DE CONTROL
 <div class="p-stack-lg flex-1">
 <div class="w-12 h-1 bg-accent-active shimmer-effect mb-6"></div>
 <h2 class="font-headline-lg uppercase mb-4 text-secondary">Construir antes de construir</h2>
-<p class="font-body-lg text-on-surface mb-6">Modelo enfocado a un Entorno de Datos Común (ACC) con parametrización avanzada para procesos transversales de Diseño y Construcción Virtual (VDC).</p>
+<p class="font-body-lg text-on-surface mb-6">Modelo enfocado a un Entorno de Datos Común (ACC-VEXEL) con parametrización avanzada para procesos transversales de presupuesto, contratación, compras.</p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div class="space-y-4">
 <h4 class="font-label-sm text-accent-active border-b border-accent-active/20 pb-2 uppercase tracking-widest">IMPLEMENTACIÓN</h4>
@@ -353,11 +353,11 @@ INTEGRACIÓN CON TABLERO DE CONTROL
 <div class="flex gap-4 mb-stack-lg overflow-x-auto pb-4 border-b border-secondary/10" id="auto-tabs">
 <button class="auto-tab flex items-center gap-2 px-6 py-3 rounded-lg glass-card-light transition-all active border-b-2 border-accent-active bg-secondary text-white" onclick="showAutoTab(0)">
 <span class="material-symbols-outlined text-accent-active" data-icon="science">science</span>
-<span class="font-label-sm uppercase tracking-wider">Bot Concretos</span>
+<span class="font-label-sm uppercase tracking-wider">Resistencia Concreto</span>
 </button>
 <button class="auto-tab flex items-center gap-2 px-6 py-3 rounded-lg glass-card-light transition-all border-b-2 border-transparent hover:border-accent-active/50 text-secondary" onclick="showAutoTab(1)">
-<span class="material-symbols-outlined text-secondary" data-icon="inventory">inventory</span>
-<span class="font-label-sm uppercase tracking-wider">Facturación Almacén</span>
+<span class="material-symbols-outlined text-secondary" data-icon="local_shipping">local_shipping</span>
+<span class="font-label-sm uppercase tracking-wider">Remisiones Concreto</span>
 </button>
 <button class="auto-tab flex items-center gap-2 px-6 py-3 rounded-lg glass-card-light transition-all border-b-2 border-transparent hover:border-accent-active/50 text-secondary" onclick="showAutoTab(2)">
 <span class="material-symbols-outlined text-secondary" data-icon="rule_folder">rule_folder</span>
@@ -367,75 +367,66 @@ INTEGRACIÓN CON TABLERO DE CONTROL
 
 <!-- Contenedor de Contenido -->
 <div class="relative min-h-96">
-<!-- Bot de Control de Concretos -->
+<!-- Resistencia Concreto -->
 <div class="auto-content reveal-stage active" id="auto-content-0">
 <div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
 <div class="flex items-center gap-3 mb-6">
 <span class="material-symbols-outlined text-accent-active text-4xl" data-icon="science">science</span>
-<h2 class="font-headline-lg text-secondary">Bot de Control de Concretos</h2>
+<h2 class="font-headline-lg text-secondary">Resistencia Concreto</h2>
 </div>
-<p class="font-body-lg text-on-surface mb-8">Monitoreo automatizado de resistencia y cumplimiento normativo en tiempo real. Detecta desviaciones, genera alertas y asegura trazabilidad completa. Reduce rechazos por incumplimiento de estándares.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<p class="font-body-lg text-on-surface mb-8">Automatización digital de datos resultado de pruebas de laboratorio de resistencia de concreto, que transforma la información para adecuarse a verificaciones normativas legales y la visualización/notificación por vía correo electrónico de incumplimientos normativos.</p>
+<div class="space-y-4">
 <div class="p-4 bg-surface-container rounded border border-accent-active/20">
-<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<h3 class="font-label-sm text-accent-active uppercase tracking-wider mb-3">Aspectos Clave</h3>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span class="font-semibold">Trazabilidad completa lote a lote</span>
-</div>
-</div>
-<div class="p-4 bg-surface-container rounded border border-accent-active/20">
-<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span>Notificación de incumplimiento normativo</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span class="font-semibold">Validación normativa automática (NTC, ACI)</span>
-</div>
-</div>
-<div class="p-4 bg-surface-container rounded border border-accent-active/20">
-<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span>Visualización de evolución histórica de resistencia de concretos en proyectos</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span class="font-semibold">Alertas inmediatas ante desviaciones</span>
-</div>
-</div>
-<div class="p-4 bg-surface-container rounded border border-accent-active/20">
-<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
-<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span class="font-semibold">Reducción de rechazos de material</span>
-</div>
+<span>Eliminación de registros manuales locales por proyecto</span>
+</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 
-<!-- Automatización de Facturación y Almacén -->
+<!-- Remisiones de Concreto -->
 <div class="auto-content reveal-stage" id="auto-content-1">
 <div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-accent-active text-4xl" data-icon="inventory">inventory</span>
-<h2 class="font-headline-lg text-secondary">Facturación y Almacén Integrado</h2>
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-accent-active text-4xl" data-icon="local_shipping">local_shipping</span>
+<h2 class="font-headline-lg text-secondary">Remisiones de Concreto</h2>
 </div>
-<p class="font-body-lg text-on-surface mb-8">Automatiza el flujo completo: direccionamiento automático al almacén, sincronización de inventario en tiempo real y facturación sin intervención manual. Elimina errores administrativos.</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<p class="text-sm text-accent-active font-label-sm mb-6">Res. Adm. Juan Plazas</p>
+<p class="font-body-lg text-on-surface mb-8">Automatización digital de remisiones de concreto que agiliza la recepción, distribución y almacenamiento, eliminando documentos físicos y mejorando la trazabilidad en tiempo real.</p>
+<div class="space-y-4">
 <div class="p-4 bg-surface-container rounded border border-accent-active/20">
-<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<h3 class="font-label-sm text-accent-active uppercase tracking-wider mb-3">Aspectos Clave</h3>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span class="font-semibold">Direccionamiento automático de despachos</span>
-</div>
-</div>
-<div class="p-4 bg-surface-container rounded border border-accent-active/20">
-<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span>Notificación automática a partes interesadas</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span class="font-semibold">Inventario sincronizado en tiempo real</span>
-</div>
-</div>
-<div class="p-4 bg-surface-container rounded border border-accent-active/20">
-<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span>Registro oportuno para entradas de almacén y validación de facturación</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span class="font-semibold">Facturación automática vinculada a despacho</span>
-</div>
-</div>
-<div class="p-4 bg-surface-container rounded border border-accent-active/20">
-<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span>Mayor trazabilidad del concreto recibido y su ubicación en obra</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span class="font-semibold">Reducción de 8-10 horas de gestión semanal</span>
-</div>
+<span>Disminución del archivo físico y la huella ambiental</span>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -510,21 +501,17 @@ INTEGRACIÓN CON TABLERO DE CONTROL
 </ul>
 </div>
 
-<!-- Célula AEG Estandarización -->
+<!-- Célula con proyectos, Construcción / AEG -->
 <div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
 <div class="flex items-center gap-3 mb-4">
 <span class="material-symbols-outlined text-accent-active text-3xl" data-icon="groups">groups</span>
-<h2 class="font-headline-lg text-secondary">Célula AEG Estandarización</h2>
+<h2 class="font-headline-lg text-secondary">Célula con proyectos, Construcción / AEG</h2>
 </div>
-<p class="font-body-lg text-on-surface mb-4">Célula transversal de Proyectos, Construcción y AEG dedicada a estandarizar manuales de propietarios, acabados, zonas comunes y procesos constructivos.</p>
+<p class="font-body-lg text-on-surface mb-4">Célula transversal de Proyectos, Construcción y AEG dedicada a estandarizar manuales de entrega de propietario y Zona Comunes.</p>
 <ul class="space-y-2">
 <li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
 <span>Manuales de propietarios normalizados</span>
-</li>
-<li class="flex items-start gap-2 text-sm text-on-surface">
-<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span>Estándares de acabados y zonas comunes</span>
 </li>
 </ul>
 </div>
@@ -535,7 +522,7 @@ INTEGRACIÓN CON TABLERO DE CONTROL
 <span class="material-symbols-outlined text-accent-active text-3xl" data-icon="link">link</span>
 <h2 class="font-headline-lg text-secondary">BIM-SINCO Integración</h2>
 </div>
-<p class="font-body-lg text-on-surface mb-4">Integración bidireccional BIM-SINCO alineando estructura de presupuesto, cronograma de pagos, contratación de recursos y seguimiento transdisciplinar por disciplinas.</p>
+<p class="font-body-lg text-on-surface mb-4">Integración bidireccional BIM-SINCO alineando estructura de presupuesto, contratación y pagos.</p>
 <ul class="space-y-2">
 <li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
@@ -548,21 +535,17 @@ INTEGRACIÓN CON TABLERO DE CONTROL
 </ul>
 </div>
 
-<!-- Bot Control Asentamientos -->
+<!-- Control Asentamientos -->
 <div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
 <div class="flex items-center gap-3 mb-4">
 <span class="material-symbols-outlined text-accent-active text-3xl" data-icon="monitoring">monitoring</span>
-<h2 class="font-headline-lg text-secondary">Bot Control Asentamientos</h2>
+<h2 class="font-headline-lg text-secondary">Control Asentamientos</h2>
 </div>
-<p class="font-body-lg text-on-surface mb-4">Sistema automatizado de monitoreo continuo de asentamientos y deformaciones estructurales con sensores integrados al gemelo digital para alertas predictivas.</p>
+<p class="font-body-lg text-on-surface mb-4">Sistema de obtención de datos de informes de asentamiento, con visualización de histórico de comportamiento.</p>
 <ul class="space-y-2">
 <li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span>Monitoreo en tiempo real con IoT</span>
-</li>
-<li class="flex items-start gap-2 text-sm text-on-surface">
-<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span>Alertas predictivas automáticas</span>
+<span>Trazabilidad histórica de asentamientos y alertas</span>
 </li>
 </ul>
 </div>
@@ -592,17 +575,7 @@ INTEGRACIÓN CON TABLERO DE CONTROL
 <span class="material-symbols-outlined text-accent-active text-3xl" data-icon="trending_up">trending_up</span>
 <h2 class="font-headline-lg text-secondary">Optimización Flujos Inversión</h2>
 </div>
-<p class="font-body-lg text-on-surface mb-4">Modelo predictivo VDC que optimiza flujos de inversión, alineando presupuesto, programación y proyección financiera bajo escenarios predictivos y análisis de restricciones.</p>
-<ul class="space-y-2">
-<li class="flex items-start gap-2 text-sm text-on-surface">
-<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span>Escenarios predictivos VDC</span>
-</li>
-<li class="flex items-start gap-2 text-sm text-on-surface">
-<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
-<span>Análisis financiero automático</span>
-</li>
-</ul>
+<p class="font-body-lg text-on-surface mb-4">Modelo predictivo que optimiza flujos de inversión, alineando presupuesto, programación y proyección financiera bajo escenarios predictivos y análisis de restricciones.</p>
 </div>
 
 <!-- Tipificación Mezclas Concreto -->
@@ -611,7 +584,7 @@ INTEGRACIÓN CON TABLERO DE CONTROL
 <span class="material-symbols-outlined text-accent-active text-3xl" data-icon="precision_manufacturing">precision_manufacturing</span>
 <h2 class="font-headline-lg text-secondary">Tipificación Mezclas Concreto</h2>
 </div>
-<p class="font-body-lg text-on-surface mb-4">Catálogo digitalizado de mezclas de concreto pre-tipificadas con proveedores ARGOS, CEMEX y HOLCIM, integrado a especificaciones de proyecto y órdenes de compra automáticas.</p>
+<p class="font-body-lg text-on-surface mb-4">Catálogo digitalizado de mezclas de concreto pre-tipificadas con proveedores ARGOS, CEMEX y HOLCIM, integrado a especificaciones de proyecto.</p>
 <ul class="space-y-2">
 <li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
@@ -630,7 +603,7 @@ INTEGRACIÓN CON TABLERO DE CONTROL
 <span class="material-symbols-outlined text-accent-active text-3xl" data-icon="description">description</span>
 <h2 class="font-headline-lg text-secondary">Actas CAPRCS Agente Soporte</h2>
 </div>
-<p class="font-body-lg text-on-surface mb-4">Agente inteligente de soporte para actas CAPRCS que centraliza definiciones técnicas dictadas, resuelve inconsistencias y genera trazabilidad de decisiones constructivas.</p>
+<p class="font-body-lg text-on-surface mb-4">Agente inteligente de soporte para actas CAPRCS que centraliza definiciones técnicas dictadas y genera trazabilidad de decisiones constructivas.</p>
 <ul class="space-y-2">
 <li class="flex items-start gap-2 text-sm text-on-surface">
 <span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
