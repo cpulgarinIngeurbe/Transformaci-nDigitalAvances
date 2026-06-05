@@ -1,0 +1,748 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#141311",
+                        "secondary-container": "#E7E9C1",
+                        "on-secondary-container": "#4B4F1D",
+                        "accent-active": "#A3C610",
+                        "on-tertiary-fixed-variant": "#3d4c00",
+                        "on-secondary": "#141311",
+                        "secondary-fixed": "#4B4F1D",
+                        "surface-container-low": "#f8f8f7",
+                        "on-surface": "#141311",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#4B4F1D",
+                        "on-tertiary-fixed": "#171e00",
+                        "on-primary-container": "#1b1d05",
+                        "inverse-on-surface": "#f8f8f7",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#4B4F1D",
+                        "secondary": "#4B4F1D",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#1b1d05",
+                        "inverse-surface": "#141311",
+                        "surface-variant": "#e5e2dd",
+                        "tertiary-fixed-dim": "#4B4F1D",
+                        "primary-fixed": "#141311",
+                        "tertiary": "#141311",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#ffffff",
+                        "primary": "#141311",
+                        "surface-tint": "#4B4F1D",
+                        "primary-container": "#f1f2e0",
+                        "surface-bright": "#ffffff",
+                        "secondary-fixed-dim": "#4B4F1D",
+                        "surface-container": "#f1f1ef",
+                        "on-surface-variant": "#47473e",
+                        "on-primary-fixed-variant": "#46492c",
+                        "on-secondary-fixed-variant": "#464a18",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#1b1d00",
+                        "outline-variant": "#c8c7ba",
+                        "on-error-container": "#410002",
+                        "inverse-primary": "#c7c9a3",
+                        "surface-dim": "#e5e2dd",
+                        "surface": "#ffffff",
+                        "outline": "#78786b",
+                        "tertiary-fixed": "#4B4F1D",
+                        "background": "#ffffff",
+                        "surface-container-highest": "#e5e2dd",
+                        "surface-container-high": "#ebeae5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-xl": "80px",
+                        "stack-xs": "4px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "stack-sm": "12px",
+                        "stack-md": "24px",
+                        "container-max": "1440px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.1em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #ffffff;
+            color: #141311;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC9xLzIxizpUK-IEQGyiohnkCCR-vYJUazit2zqvD21aZz22MV3MWSoJlQbah6g4xVeMLknO1DjVdPLfelliZ8qLzWMqiHeVXeUtVjjqPFQCYZjTLsyhnuSuDsaIfCVe_N7n1mBCC0C63jUIHI6bwuqVCifS6sdScZpxnJ9R0EX3_fON4awvi2BZmRGlnoYzIuZOLHF21WONbMb11hoNg6QM9cD33suulaCOID7dTsVAw_kK7APM_NQJK4GHp2C8DsqmCPvY9QynHFH);
+            filter: contrast(150%) brightness(100%);
+        }
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid #E7E9C1;
+        }
+        .shimmer-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-effect::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to bottom right, rgba(163, 198, 16, 0) 0%, rgba(163, 198, 16, 0) 40%, rgba(163, 198, 16, 0.2) 50%, rgba(163, 198, 16, 0) 60%, rgba(163, 198, 16, 0) 100%);
+            transform: rotate(30deg);
+            animation: shimmer 4s infinite linear;
+            pointer-events: none;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-150%) rotate(30deg); }
+            100% { transform: translateX(150%) rotate(30deg); }
+        }
+        .reveal-stage {
+            opacity: 0;
+            transform: translateX(100px);
+            filter: blur(5px);
+            transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        .reveal-stage.active {
+            opacity: 1;
+            transform: translateX(0);
+            filter: blur(0);
+            pointer-events: auto;
+            z-index: 20;
+        }
+        .reveal-stage:not(.active) {
+            transform: translateX(-100px);
+        }
+        .custom-cursor {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #4B4F1D;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+    </style>
+</head>
+<body class="font-body-md" style="background: #ffffff; color: #141311;">
+<div class="custom-cursor" id="cursor" style="transform: scale(1); background-color: transparent; border-color: rgb(75, 79, 29); left: 31px; top: 516px;"></div>
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-stack-sm bg-white/80 backdrop-blur-xl border-b border-black/5">
+<div class="flex items-center gap-2">
+
+</div>
+</nav>
+<main class="pt-20">
+<!-- SECCIÓN: TRANSFORMACIÓN DEL MODELADO DE INFORMACIÓN (BIM) -->
+<section class="min-h-screen relative flex flex-col justify-center items-center py-stack-xl px-margin-desktop overflow-hidden" id="seccion-evolucion-bim">
+<div class="w-full max-w-container-max">
+<div class="mb-stack-lg border-l-4 border-accent-active pl-6">
+<span class="font-label-sm text-secondary uppercase tracking-[0.3em] mb-2 block">01 / ELEMENTO TRANSFORMADOR</span>
+<h1 class="font-display-lg text-display-lg uppercase mb-4 text-secondary leading-none">PROCESOS BIM</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">Transformación integral de la gestión de información en construcción a través de tres fases evolutivas orientadas a la eficiencia.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Navegación de Fases -->
+<div class="lg:col-span-4 space-y-4 z-30" id="pasos-bim">
+<button class="bim-btn w-full text-left p-6 glass-card-light transition-all group active border-l-4 border-accent-active bg-secondary" onclick="showBimStage(0)">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-accent-active" data-icon="architecture">architecture</span>
+<span class="font-label-sm text-accent-active uppercase tracking-widest">FASE 01</span>
+</div>
+<span class="font-headline-md block text-white transition-transform group-hover:translate-x-1">Proceso Manual</span>
+<p class="font-body-md text-white/60 text-sm mt-2">Extracción tradicional de datos y planos físicos.</p>
+</button>
+<button class="bim-btn w-full text-left p-6 glass-card-light transition-all group border-l-4 border-transparent hover:border-accent-active/50" onclick="showBimStage(1)">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary" data-icon="construction">construction</span>
+<span class="font-label-sm text-secondary uppercase tracking-widest">FASE 02</span>
+</div>
+<span class="font-headline-md block text-secondary transition-transform group-hover:translate-x-1">Modelo BIM 3D</span>
+<p class="font-body-md text-on-surface-variant text-sm mt-2 opacity-60">Cuantificación paramétrica digital.</p>
+</button>
+<button class="bim-btn w-full text-left p-6 glass-card-light transition-all group border-l-4 border-transparent hover:border-accent-active/50" onclick="showBimStage(2)">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="font-label-sm text-secondary uppercase tracking-widest">FASE 03</span>
+</div>
+<span class="font-headline-md block text-secondary transition-transform group-hover:translate-x-1">Gemelo Digital y VDC</span>
+<p class="font-body-md text-on-surface-variant text-sm mt-2 opacity-60">Entorno de Datos Común (ACC).</p>
+</button>
+</div>
+<!-- Contenedor de Contenido Dinámico -->
+<div class="lg:col-span-8 relative min-h-[600px]">
+<!-- FASE 01: PROCESO MANUAL -->
+<div class="reveal-stage active" id="bim-content-0">
+<div class="glass-card-light h-full rounded-lg overflow-hidden flex flex-col">
+<div class="h-[500px] overflow-hidden bg-gradient-to-b from-accent-active/5 to-transparent flex items-center justify-center p-8">
+<img alt="Proceso Manual de Planos" class="max-w-full max-h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCR7XyFd8zNvgtk4aRO2RJjn3ZckXDkyTusZNvwBAW8SaQWn1cN1nO4HIsIsnvlICOI_dn-JOiz9z2t0ca4sjGNNP328PtT_EaDu0SGqGykVF4xQMB1ZfqikSNJTTlbQi--n35CHCzstBDk7aDUq9tNngIl1urTcL48Ctq-4gC6oqvFwVtLOyIzWcGNUJcXFoqkM4RZKJQLQ-RgOk-ofbIctr-9FcKkHBaLTQZiEs4b4ZAZGmxzmLCudre-lvYic2llwFCtpSgb1iz1">
+</div>
+<div class="p-stack-lg flex-1">
+<div class="w-12 h-1 bg-secondary mb-6"></div>
+<h2 class="font-headline-lg uppercase mb-4 text-secondary">Obtención de cantidades manual</h2>
+<p class="font-body-lg text-on-surface mb-8">Obtención de cantidades de forma manual a partir de planos físicos con alto consumo de tiempos y riesgo crítico de errores en la entrada de datos.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container rounded border border-secondary/5 border-accent-active/20">
+<span class="font-label-sm block text-accent-active mb-1">RIESGO</span>
+<p class="text-sm text-on-surface">Errores de transcripción y omisiones</p>
+</div>
+<div class="p-4 bg-surface-container rounded border border-secondary/5 border-accent-active/20">
+<span class="font-label-sm block text-accent-active mb-1">IMPACTO</span>
+<p class="text-sm text-on-surface">Alto consumo de horas-hombre ineficientes</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FASE 02: MODELO BIM 3D -->
+<div class="reveal-stage" id="bim-content-1">
+<div class="glass-card-light h-full rounded-lg overflow-hidden flex flex-col">
+<div class="h-64 overflow-hidden">
+<img alt="Modelo BIM 3D Paramétrico" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP4zls8RGmmXFHBCMB1q20DPYkar7JqDAxvQvUVB7QNPASNtc47yp3TuU5Sewqf7pDUdevF7XgpETCwIADl9h-5Kwd6skNQa18K2qbL47wTCV-WKZ8M-OblHNRdYCngwitjIYGKB3sCFuCui_SWHjVlgub7HWf4S7zc3WjZpoYdDx2j5Isr-6iaS7XNCNPA2v6rL2TxbH7SL6mMxHRWGu7SXF2UzS5ur2eeTy547dyKU5fp9i-viv7lWfHbUthEF0DLJXmRhj4LQFO">
+</div>
+<div class="p-stack-lg flex-1">
+<div class="w-12 h-1 bg-accent-active mb-6"></div>
+<h2 class="font-headline-lg uppercase mb-4 text-secondary">Modelado BIM Paramétrico</h2>
+<p class="font-body-lg text-on-surface mb-6">Modelado con parámetros inteligentes en 3D. Implementación de un Tablero de Control integrado para cuantificación automática en tiempo real.</p>
+<ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active text-lg" data-icon="check_circle">check_circle</span>
+Soporte exacto de cantidades para contratos
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active text-lg" data-icon="check_circle">check_circle</span>
+Reducción drástica de tiempos de revisión
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active text-lg" data-icon="check_circle">check_circle</span>
+Eliminación de procesos de control redundantes
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active text-lg" data-icon="check_circle">check_circle</span>
+Confiabilidad técnica de procesos garantizada
+</li>
+</ul>
+<div class="mt-8">
+<div class="inline-block px-4 py-2 bg-accent-active/10 border border-accent-active/30 rounded text-accent-active font-label-sm">
+INTEGRACIÓN CON TABLERO DE CONTROL
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- FASE 03: GEMELO DIGITAL Y VDC -->
+<div class="reveal-stage" id="bim-content-2">
+<div class="glass-card-light h-full rounded-lg overflow-hidden flex flex-col">
+<div class="h-64 overflow-hidden">
+<img alt="Gemelo Digital y VDC" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATfbvkzWVputwlGZdFyBvBq2E42KF_ImOWwt0D9xSSW3fSYKHBkUx4a8-6Yg-ZtCTSr8VqDqLqGdfyTSHy5IyBdFylDK8UGT-XHSWSmZJq1WQHJafwIls2OPbVYDjdiZ1Q6WM1zDSIMYqojSWY5IuA6sYMWJVrm1K64Ob96sRauKq6WiT7S_BzTq-kgV0HV1TqcxzBXnHoFTnb5mMcu7_O6e2rdCd_qae0RF6vwjwCzJyoBFXajEjKhKjNm_xLta7BBqLY1Ci94FIJ">
+</div>
+<div class="p-stack-lg flex-1">
+<div class="w-12 h-1 bg-accent-active shimmer-effect mb-6"></div>
+<h2 class="font-headline-lg uppercase mb-4 text-secondary">Construir antes de construir</h2>
+<p class="font-body-lg text-on-surface mb-6">Modelo enfocado a un Entorno de Datos Común (ACC) con parametrización avanzada para procesos transversales de Diseño y Construcción Virtual (VDC).</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<h4 class="font-label-sm text-accent-active border-b border-accent-active/20 pb-2 uppercase tracking-widest">IMPLEMENTACIÓN</h4>
+<ul class="space-y-3 text-sm">
+<li class="flex gap-2">
+<span class="text-accent-active font-bold">01.</span>
+<span class="text-on-surface">Codificación técnica de Mano de obra y Materiales</span>
+</li>
+<li class="flex gap-2">
+<span class="text-accent-active font-bold">02.</span>
+<span class="text-on-surface">Planificación y cuantificación parametrizada avanzada</span>
+</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-sm text-secondary border-b border-secondary/10 pb-2 uppercase tracking-widest">PLAN DE RUTA EVOLUTIVO</h4>
+<div class="space-y-3 text-[10px] font-label-sm">
+<div class="flex items-center gap-3">
+<span class="text-on-surface-variant w-28">PRECONSTRUCCIÓN</span>
+<div class="h-1.5 flex-1 bg-black/5 rounded-full overflow-hidden">
+<div class="h-full bg-accent-active w-full"></div>
+</div>
+<span class="text-accent-active">EJECUTADO</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-on-surface-variant w-28">PILOTO (ACC)</span>
+<div class="h-1.5 flex-1 bg-black/5 rounded-full overflow-hidden">
+<div class="h-full bg-accent-active/40 w-1/2"></div>
+</div>
+<span class="opacity-60">EN CURSO</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-on-surface-variant w-28">EVOLUCIÓN (VDC)</span>
+<div class="h-1.5 flex-1 bg-black/5 rounded-full"></div>
+<span class="opacity-40">PRÓXIMO</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-secondary/5 flex justify-between items-center">
+<p class="font-body-md italic text-on-surface-variant text-xs">"Gestión Integral BIM con Entorno de Datos Común (ACC) y Evolución hacia VDC"</p>
+<div class="px-3 py-1 bg-secondary text-accent-active rounded-full font-label-sm text-[9px] tracking-widest">PRÓXIMA GENERACIÓN</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN: ECOSISTEMA DIGITAL - AUTOMATIZACIÓN DE PROCESOS -->
+<section class="py-stack-xl px-margin-desktop bg-surface-container-lowest border-t border-secondary/5" id="seccion-automatizacion">
+<div class="w-full max-w-container-max">
+<div class="mb-stack-lg border-l-4 border-accent-active pl-6">
+<span class="font-label-sm text-secondary uppercase tracking-[0.3em] mb-2 block">02 / ELEMENTO TRANSFORMADOR</span>
+<h1 class="font-display-lg text-display-lg uppercase mb-4 text-secondary leading-none">AUTOMATIZACIÓN DE PROCESOS</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">Sistemas inteligentes que automatizan flujos críticos: monitoreo de resistencia de concretos en tiempo real, control normativo, y facturación-almacén integrada sin intervención manual.</p>
+</div>
+
+<!-- Pestañas/Botones -->
+<div class="flex gap-4 mb-stack-lg overflow-x-auto pb-4 border-b border-secondary/10" id="auto-tabs">
+<button class="auto-tab flex items-center gap-2 px-6 py-3 rounded-lg glass-card-light transition-all active border-b-2 border-accent-active bg-secondary text-white" onclick="showAutoTab(0)">
+<span class="material-symbols-outlined text-accent-active" data-icon="science">science</span>
+<span class="font-label-sm uppercase tracking-wider">Bot Concretos</span>
+</button>
+<button class="auto-tab flex items-center gap-2 px-6 py-3 rounded-lg glass-card-light transition-all border-b-2 border-transparent hover:border-accent-active/50 text-secondary" onclick="showAutoTab(1)">
+<span class="material-symbols-outlined text-secondary" data-icon="inventory">inventory</span>
+<span class="font-label-sm uppercase tracking-wider">Facturación Almacén</span>
+</button>
+<button class="auto-tab flex items-center gap-2 px-6 py-3 rounded-lg glass-card-light transition-all border-b-2 border-transparent hover:border-accent-active/50 text-secondary" onclick="showAutoTab(2)">
+<span class="material-symbols-outlined text-secondary" data-icon="rule_folder">rule_folder</span>
+<span class="font-label-sm uppercase tracking-wider">SINCO Cortes</span>
+</button>
+</div>
+
+<!-- Contenedor de Contenido -->
+<div class="relative min-h-96">
+<!-- Bot de Control de Concretos -->
+<div class="auto-content reveal-stage active" id="auto-content-0">
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-accent-active text-4xl" data-icon="science">science</span>
+<h2 class="font-headline-lg text-secondary">Bot de Control de Concretos</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-8">Monitoreo automatizado de resistencia y cumplimiento normativo en tiempo real. Detecta desviaciones, genera alertas y asegura trazabilidad completa. Reduce rechazos por incumplimiento de estándares.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Trazabilidad completa lote a lote</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Validación normativa automática (NTC, ACI)</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Alertas inmediatas ante desviaciones</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Reducción de rechazos de material</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Automatización de Facturación y Almacén -->
+<div class="auto-content reveal-stage" id="auto-content-1">
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-accent-active text-4xl" data-icon="inventory">inventory</span>
+<h2 class="font-headline-lg text-secondary">Facturación y Almacén Integrado</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-8">Automatiza el flujo completo: direccionamiento automático al almacén, sincronización de inventario en tiempo real y facturación sin intervención manual. Elimina errores administrativos.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Direccionamiento automático de despachos</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Inventario sincronizado en tiempo real</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Facturación automática vinculada a despacho</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Reducción de 8-10 horas de gestión semanal</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- SINCO Automatización de Cortes -->
+<div class="auto-content reveal-stage" id="auto-content-2">
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-accent-active text-4xl" data-icon="rule_folder">rule_folder</span>
+<h2 class="font-headline-lg text-secondary">SINCO Automatización Cortes</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-8">Automatización digital del proceso de cortes de acta en el sistema SINCO. Flujo de aprobación integrado con residente administrativo, director de proyecto y validación técnica con residente técnico.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Automatización digital de Excel a SINCO</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Flujo de aprobación automatizado multinivel</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Validación técnica residente ingeniero</span>
+</div>
+</div>
+<div class="p-4 bg-surface-container rounded border border-accent-active/20">
+<div class="flex items-start gap-2 text-sm text-on-surface mb-2">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span class="font-semibold">Trazabilidad completa de aprobaciones</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SECCIÓN: ELEMENTO INTEGRADOR PLANIFICACIÓN -->
+<section class="py-stack-xl px-margin-desktop bg-surface-container-lowest border-t border-secondary/5" id="seccion-elemento-integrador">
+<div class="w-full max-w-container-max">
+<div class="mb-stack-lg border-l-4 border-accent-active pl-6">
+<span class="font-label-sm text-secondary uppercase tracking-[0.3em] mb-2 block">03 / ELEMENTO TRANSFORMADOR</span>
+<h1 class="font-display-lg text-display-lg uppercase mb-4 text-secondary leading-none">ELEMENTO INTEGRADOR PLANIFICACIÓN</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">Orquestación de sistemas y procesos para alineación estructural de presupuesto, programación, contratación y ejecución bajo modelo VDC.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Pedido SINCO para Planificación -->
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-accent-active text-3xl" data-icon="shopping_cart">shopping_cart</span>
+<h2 class="font-headline-lg text-secondary">Pedido SINCO Planificación</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-4">Módulo de pedidos integrado en SINCO que permite planificación predictiva de materiales, recursos y cronograma de entregas alineado con el modelo BIM y plan VDC.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Pedidos automáticos basados en modelado paramétrico</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Visibilidad de cadena de suministro</span>
+</li>
+</ul>
+</div>
+
+<!-- Célula AEG Estandarización -->
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-accent-active text-3xl" data-icon="groups">groups</span>
+<h2 class="font-headline-lg text-secondary">Célula AEG Estandarización</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-4">Célula transversal de Proyectos, Construcción y AEG dedicada a estandarizar manuales de propietarios, acabados, zonas comunes y procesos constructivos.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Manuales de propietarios normalizados</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Estándares de acabados y zonas comunes</span>
+</li>
+</ul>
+</div>
+
+<!-- BIM-SINCO Integración Estructural -->
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-accent-active text-3xl" data-icon="link">link</span>
+<h2 class="font-headline-lg text-secondary">BIM-SINCO Integración</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-4">Integración bidireccional BIM-SINCO alineando estructura de presupuesto, cronograma de pagos, contratación de recursos y seguimiento transdisciplinar por disciplinas.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Alineación estructura presupuesto-BIM</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Trazabilidad integrada contratos-pagos</span>
+</li>
+</ul>
+</div>
+
+<!-- Bot Control Asentamientos -->
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-accent-active text-3xl" data-icon="monitoring">monitoring</span>
+<h2 class="font-headline-lg text-secondary">Bot Control Asentamientos</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-4">Sistema automatizado de monitoreo continuo de asentamientos y deformaciones estructurales con sensores integrados al gemelo digital para alertas predictivas.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Monitoreo en tiempo real con IoT</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Alertas predictivas automáticas</span>
+</li>
+</ul>
+</div>
+
+<!-- Topografía y Gemelos Digitales -->
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-accent-active text-3xl" data-icon="landscape">landscape</span>
+<h2 class="font-headline-lg text-secondary">Topografía y Ortofotogrametría</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-4">Vinculación de datos topográficos y nubes de puntos con gemelos digitales mediante ortofotogrametría de drones para validación constructiva en tiempo real.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Captura aérea con drones georeferenciada</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Comparativa digital vs. planeado</span>
+</li>
+</ul>
+</div>
+
+<!-- Optimización Flujos de Inversión -->
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-accent-active text-3xl" data-icon="trending_up">trending_up</span>
+<h2 class="font-headline-lg text-secondary">Optimización Flujos Inversión</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-4">Modelo predictivo VDC que optimiza flujos de inversión, alineando presupuesto, programación y proyección financiera bajo escenarios predictivos y análisis de restricciones.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Escenarios predictivos VDC</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Análisis financiero automático</span>
+</li>
+</ul>
+</div>
+
+<!-- Tipificación Mezclas Concreto -->
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-accent-active text-3xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h2 class="font-headline-lg text-secondary">Tipificación Mezclas Concreto</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-4">Catálogo digitalizado de mezclas de concreto pre-tipificadas con proveedores ARGOS, CEMEX y HOLCIM, integrado a especificaciones de proyecto y órdenes de compra automáticas.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Base de datos mezclas tipificadas</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Integración proveedores principales</span>
+</li>
+</ul>
+</div>
+
+<!-- Actas CAPRCS y Soporte Técnico -->
+<div class="glass-card-light p-stack-lg rounded-lg border border-accent-active/20">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-accent-active text-3xl" data-icon="description">description</span>
+<h2 class="font-headline-lg text-secondary">Actas CAPRCS Agente Soporte</h2>
+</div>
+<p class="font-body-lg text-on-surface mb-4">Agente inteligente de soporte para actas CAPRCS que centraliza definiciones técnicas dictadas, resuelve inconsistencias y genera trazabilidad de decisiones constructivas.</p>
+<ul class="space-y-2">
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Base de criterios técnicos CAPRCS</span>
+</li>
+<li class="flex items-start gap-2 text-sm text-on-surface">
+<span class="material-symbols-outlined text-accent-active scale-75" data-icon="check_circle">check_circle</span>
+<span>Trazabilidad de decisiones técnicas</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script>
+    // Interacción del Cursor Personalizado
+    const cursor = document.getElementById('cursor');
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
+    document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'scale(1.5)';
+            cursor.style.backgroundColor = 'rgba(163, 198, 16, 0.15)';
+            cursor.style.borderColor = '#A3C610';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'scale(1)';
+            cursor.style.backgroundColor = 'transparent';
+            cursor.style.borderColor = '#4B4F1D';
+        });
+    });
+
+    // Interacción de Fases BIM
+    function showBimStage(index) {
+        const btns = document.querySelectorAll('.bim-btn');
+        btns.forEach((btn, i) => {
+            if(i === index) {
+                btn.classList.add('border-accent-active', 'bg-secondary');
+                btn.classList.remove('border-transparent', 'hover:border-accent-active/50');
+
+                const title = btn.querySelector('.font-headline-md');
+                const label = btn.querySelector('.font-label-sm');
+                const desc = btn.querySelector('p');
+                const icon = btn.querySelector('.material-symbols-outlined');
+
+                title.classList.replace('text-secondary', 'text-white');
+                if(label) label.classList.replace('text-secondary', 'text-accent-active');
+                if(desc) desc.classList.replace('text-on-surface-variant', 'text-white/60');
+                if(icon) icon.classList.replace('text-secondary', 'text-accent-active');
+            } else {
+                btn.classList.remove('border-accent-active', 'bg-secondary');
+                btn.classList.add('border-transparent', 'hover:border-accent-active/50');
+
+                const title = btn.querySelector('.font-headline-md');
+                const label = btn.querySelector('.font-label-sm');
+                const desc = btn.querySelector('p');
+                const icon = btn.querySelector('.material-symbols-outlined');
+
+                title.classList.replace('text-white', 'text-secondary');
+                if(label) label.classList.replace('text-accent-active', 'text-secondary');
+                if(desc) desc.classList.replace('text-white/60', 'text-on-surface-variant');
+                if(icon) icon.classList.replace('text-accent-active', 'text-secondary');
+            }
+        });
+
+        const stages = document.querySelectorAll('#seccion-evolucion-bim .reveal-stage');
+        stages.forEach((stage, i) => {
+            stage.classList.remove('active');
+            if(i === index) {
+                stage.classList.add('active');
+            }
+        });
+    }
+
+    // Interacción de Pestañas de Automatización
+    function showAutoTab(index) {
+        const tabs = document.querySelectorAll('.auto-tab');
+        const contents = document.querySelectorAll('.auto-content');
+
+        tabs.forEach((tab, i) => {
+            if(i === index) {
+                tab.classList.add('bg-secondary', 'text-white', 'border-accent-active');
+                tab.classList.remove('text-secondary', 'border-transparent', 'hover:border-accent-active/50');
+
+                const icon = tab.querySelector('.material-symbols-outlined');
+                if(icon) icon.classList.replace('text-secondary', 'text-accent-active');
+            } else {
+                tab.classList.remove('bg-secondary', 'text-white', 'border-accent-active');
+                tab.classList.add('text-secondary', 'border-transparent', 'hover:border-accent-active/50');
+
+                const icon = tab.querySelector('.material-symbols-outlined');
+                if(icon) icon.classList.replace('text-accent-active', 'text-secondary');
+            }
+        });
+
+        contents.forEach((content, i) => {
+            if(i === index) {
+                content.classList.add('active');
+            } else {
+                content.classList.remove('active');
+            }
+        });
+    }
+
+    // Inicializar primera fase
+    window.addEventListener('DOMContentLoaded', () => {
+        showBimStage(0);
+    });
+</script>
+
+</body></html>
